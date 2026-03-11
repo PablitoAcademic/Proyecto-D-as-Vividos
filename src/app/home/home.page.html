@@ -15,6 +15,24 @@
 
   <div id="container">
     <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h1></h1>
+    <div>
+      <ion-text>
+        Ingresa Nombre
+      </ion-text>
+      <ion-input [(ngModel)]="userName" (keyup)="setUsuarioName($event)" placeholder="user name">
+      </ion-input>
+      <ion-text>
+        Ingresa tu fecha de Nacimiento (dd/mm/yyyy) 
+      </ion-text>
+      <ion-input [(ngModel)]="userBirthDate" (keyup)="setUsuarioBirthDate($event)" placeholder="birthDate">
+
+      </ion-input>
+    </div>
+    <ion-button [routerLink]="['/dias']">
+      Calcular dias vividos en pagina nueva dd/mm/yyyy
+    </ion-button>
+    <p>Start with Ionic {{usuario.getName()}}
+      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
 </ion-content>
